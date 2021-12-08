@@ -1,9 +1,17 @@
 {
   "name": "main-layout",
+  "description": "Angular main-layout with sidenav menu",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^13.0.0",
     "@angular/core": "^13.0.0"
+  },
+  "homepage": "https://github.com/gustyAdolf/main-layout/tree/main/projects/main-layout",
+  "license": "MIT",
+  "author": {
+    "name": "Gustavo A. Ramírez Franco",
+    "email": "gustyadolf@gmail.com",
+    "url": "https://github.com/gustyAdolf"
   },
   "dependencies": {
     "tslib": "^2.3.0"
