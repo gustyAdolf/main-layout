@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "97c88453-cb71-4870-b5b1-a5d1b06371ea"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -40,7 +43,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "2mb",
                   "maximumError": "1mb"
                 },
                 {
@@ -102,6 +105,37 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "main-layout": {
+      "projectType": "library",
+      "root": "projects/main-layout",
+      "sourceRoot": "projects/main-layout/src",
+      "prefix": "ml",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/main-layout/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/main-layout/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/main-layout/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/main-layout/src/test.ts",
+            "tsConfig": "projects/main-layout/tsconfig.spec.json",
+            "karmaConfig": "projects/main-layout/karma.conf.js"
           }
         }
       }

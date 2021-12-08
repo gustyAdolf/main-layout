@@ -1,0 +1,26 @@
+<mat-sidenav-container autosize>
+  <mat-sidenav fixedInViewport="true"
+               mode="side"
+               opened="{{isExpanded}}">
+    <ml-sidenav-menu [menu]="menu" (toggleMenu)="toggleMenu()" [isExpanded]="isExpanded"></ml-sidenav-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content [style.margin-left.px]="!isExpanded ? 60 : 250">
+
+    <mat-toolbar class="ml-toolbar" color="primary">
+      <ng-content select="[ml-toolbar]"></ng-content>
+    </mat-toolbar>
+
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+
+    <footer class="ml-footer" [style.margin-left.em]="!isExpanded ? 2 : 0">
+      <mat-toolbar color="primary">
+        <ng-content select="[ml-footer]"></ng-content>
+      </mat-toolbar>
+    </footer>
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>

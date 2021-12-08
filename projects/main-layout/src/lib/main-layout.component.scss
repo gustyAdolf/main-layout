@@ -1,0 +1,28 @@
+.content {
+  min-height: 91vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 1em 5vh;
+}
+
+mat-sidenav[style] {
+  visibility: visible !important;
+}
+
+.mat-drawer {
+  transform: none !important;
+}
+
+.ml-toolbar {
+  padding-inline-start: 2em;
+}
+
+.ml-footer {
+  color: whitesmoke;
+  font-size: 10px;
+}
+mat-toolbar {
+  position: relative;
+  height: 2em;
+}

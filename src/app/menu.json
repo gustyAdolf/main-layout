@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Home",
+    "icon": "search",
+    "routing": "home"
+  },
+  {
+    "name": "Settings",
+    "icon": "settings",
+    "children": [
+      {
+        "name": "account",
+        "icon": "",
+        "routing": "account"
+      },
+      {
+        "name": "App config",
+        "icon": "",
+        "routing": "app-config"
+      }
+    ]
+  }
+]
