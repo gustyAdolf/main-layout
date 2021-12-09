@@ -5,8 +5,13 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 25px 0;
-&:hover {
-   cursor: pointer;
- }
+  padding: 2px 0;
+}
+
+.ml-logo {
+  min-height: 3vh;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

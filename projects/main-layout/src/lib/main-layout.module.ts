@@ -10,6 +10,7 @@ import {MatListModule} from "@angular/material/list";
 import {CommonModule} from "@angular/common";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     MatListModule,
     CommonModule,
     MatExpansionModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   exports: [
     MainLayoutComponent

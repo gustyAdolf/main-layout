@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'ml-sidenav-menu',
@@ -9,8 +9,10 @@ export class SidenavMenuComponent implements OnInit {
   @Input() menu;
   @Input() isExpanded: boolean = false;
   @Output() toggleMenu = new EventEmitter<any>();
+  @Input() showText = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

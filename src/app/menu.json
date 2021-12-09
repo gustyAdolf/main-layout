@@ -9,7 +9,7 @@
     "icon": "settings",
     "children": [
       {
-        "name": "account",
+        "name": "Account",
         "icon": "",
         "routing": "account"
       },

@@ -2,12 +2,17 @@
   <mat-sidenav fixedInViewport="true"
                mode="side"
                opened="{{isExpanded}}">
-    <ml-sidenav-menu [menu]="menu" (toggleMenu)="toggleMenu()" [isExpanded]="isExpanded"></ml-sidenav-menu>
+    <ml-sidenav-menu [menu]="menu" (toggleMenu)="toggleMenu()" [isExpanded]="isExpanded" [showText]="showText">
+      <ng-content select="[ml-menu-logo]" ml-menu-logo></ng-content>
+    </ml-sidenav-menu>
   </mat-sidenav>
 
   <mat-sidenav-content [style.margin-left.px]="!isExpanded ? 60 : 250">
 
-    <mat-toolbar class="ml-toolbar" color="primary">
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="toggleMenu()" class="ml-close-menu">
+        <mat-icon *ngIf="isExpanded">keyboard_backspace</mat-icon>
+      </button>
       <ng-content select="[ml-toolbar]"></ng-content>
     </mat-toolbar>
 

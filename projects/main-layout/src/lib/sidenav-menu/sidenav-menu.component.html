@@ -1,8 +1,15 @@
 <section [class.sidenav]="isExpanded">
-  <div class="toggle">
-    <mat-icon (click)="toggleMenu.emit(isExpanded)">
-      {{ isExpanded ? "keyboard_backspace" : "dehaze" }}
-    </mat-icon>
+  <div *ngIf="isExpanded" class="ml-logo">
+    <ng-content select="[ml-menu-logo]"></ng-content>
   </div>
-  <ml-menu-item *ngFor="let item of menu" [item]="item" [isExpandedMenu]="isExpanded"></ml-menu-item>
+  <mat-divider *ngIf="isExpanded" style="margin: 1em"></mat-divider>
+  <div class="toggle">
+    <button *ngIf="!isExpanded" mat-icon-button (click)="toggleMenu.emit(isExpanded)">
+      <mat-icon>
+        {{ isExpanded ? "keyboard_backspace" : "dehaze" }}
+      </mat-icon>
+    </button>
+  </div>
+  <ml-menu-item *ngFor="let item of menu" [item]="item" [isExpandedMenu]="isExpanded"
+                (expandMenu)="toggleMenu.emit(isExpanded)" [showText]="showText"></ml-menu-item>
 </section>

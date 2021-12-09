@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class MainLayoutComponent implements OnInit {
   isExpanded = false;
   @Input() menu;
+  @Input() showText = false;
 
   constructor() {
   }
